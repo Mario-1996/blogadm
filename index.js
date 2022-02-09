@@ -16,6 +16,13 @@ const User = require("./user/User");
 //view engine
 app.set('view engine', 'ejs');
 
+//Sessions
+
+app.use(session({
+    secret: "dSDsdSHDdhHdUOSHd", 
+    cookie: { maxAge: 30000000 }
+}));
+
 //Static
 app.use(express.static('public'));
 
